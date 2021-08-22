@@ -1,8 +1,7 @@
 from flask import Flask, request
 import telegram
-from credentials import bot_token, bot_user_name,URL
+from credentials import bot_token, bot_user_name, URL
 from mastermind import get_response
-
 
 global bot
 global TOKEN
@@ -10,6 +9,7 @@ TOKEN = bot_token
 bot = telegram.Bot(token=TOKEN)
 
 app = Flask(__name__)
+
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
@@ -28,6 +28,7 @@ def respond():
 
     return 'ok'
 
+
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
     s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=TOKEN))
@@ -36,12 +37,14 @@ def set_webhook():
     else:
         return "webhook setup failed"
 
+
 @app.route('/')
 def index():
     return '.'
 
+
 @app.route('/hi')
-def index():
+def hi():
     return 'My name is market signal'
 
 
