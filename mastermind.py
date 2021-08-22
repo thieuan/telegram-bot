@@ -1,5 +1,5 @@
 def get_response(msg):
-    """
-    you can place your mastermind AI here
-    """
-    return "معلش !"
+    # check command /msg
+    if msg == "/watchlist":
+        return "AAS,AAT,AGR,ACB,APS,BKG,BVS,BWE,C4G,CKG,CTR,D2D,DBC,DCL,DCM,DDG,DDV,DGW,DHC,DPG,DPR,DRC,DRI,DTD,DVN,ELC,EVF,G36,GDT,GEX,GMD,GVR,HAX,HCD,HCM,HDB,HDC,HDG,HPG,HSG,HTN,HU4,HUT,IDC,ITA,KBC,KDH,REE,SBS,SBT,SBV,SGT,SHB,SHS,SRA,SSI,STB,SZC,TCB,TCL,TDM,TEG,TIG,TIP,TVN,VDS,VGC,VGI,VGT,VIX,VND,VPB"
+    return "Thieu Tran An designed!"
