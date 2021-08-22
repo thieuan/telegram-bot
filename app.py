@@ -40,6 +40,10 @@ def set_webhook():
 def index():
     return '.'
 
+@app.route('/hi')
+def index():
+    return 'My name is market signal'
+
 
 if __name__ == '__main__':
     app.run(threaded=True)
